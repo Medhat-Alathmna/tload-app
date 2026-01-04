@@ -105,7 +105,7 @@ export function HeroSection() {
                   alt="Tload Chemical Transportation Truck"
                   width={700}
                   height={700}
-                  className="w-full h-auto object-contain drop-shadow-2xl hover:brightness-110 transition-all duration-500"
+                  className="w-full h-auto object-contain drop-shadow-2xl hover:brightness-110 transition-all duration-500 rounded-[20px]"
                 />
               </div>
             </div>

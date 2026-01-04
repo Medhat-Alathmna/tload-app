@@ -313,4 +313,31 @@
     height: 80vh;
     min-height: 600px;
   }
+
+  .retro-halftone {
+    position: relative;
+    overflow: hidden;
+    /* Ensure the card has a background color so the pattern sits on top of it but behind text */
+    background-color: var(--card);
+  }
+
+  /* Raise the content of the card above the pattern */
+  .retro-halftone>* {
+    position: relative;
+    z-index: 10;
+  }
+
+  .retro-halftone::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    /* Use a slightly more subtle but visible pattern */
+    background-image: radial-gradient(circle, var(--muted-foreground) 1.5px, transparent 1.5px);
+    background-size: 30px 30px;
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 0;
+  }
 }
