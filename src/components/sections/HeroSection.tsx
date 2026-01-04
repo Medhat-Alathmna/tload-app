@@ -12,7 +12,7 @@ export function HeroSection() {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
       <div className="absolute inset-0 halftone-pattern halftone-large halftone-fade" />
-      
+
       {/* Decorative Elements */}
       <div className="absolute top-20 right-10 w-72 h-72 bg-secondary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
@@ -93,50 +93,27 @@ export function HeroSection() {
             </FadeContent>
           </div>
 
-          {/* Right Content - Illustration */}
+          {/* Right Content - Truck Image */}
           <FadeContent blur duration={0.8} delay={300}>
             <div className="relative hidden lg:block">
-              {/* Abstract Chemical/Industrial Illustration */}
-              <div className="relative w-full aspect-square max-w-lg mx-auto">
-                {/* Main Circle */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-secondary/20 to-accent/10 animate-pulse" />
-                
-                {/* Orbiting Elements */}
-                <div className="absolute top-1/4 left-0 w-20 h-20 rounded-full bg-secondary/30 backdrop-blur-sm border border-secondary/20 flex items-center justify-center">
-                  <span className="text-2xl">H2O</span>
-                </div>
-                <div className="absolute bottom-1/4 right-0 w-24 h-24 rounded-full bg-accent/30 backdrop-blur-sm border border-accent/20 flex items-center justify-center">
-                  <span className="text-2xl">CO2</span>
-                </div>
-                <div className="absolute top-0 right-1/4 w-16 h-16 rounded-full bg-muted backdrop-blur-sm border border-border flex items-center justify-center">
-                  <span className="text-lg">NaCl</span>
-                </div>
-                
-                {/* Center Element */}
-                <div className="absolute inset-1/4 rounded-full bg-gradient-to-br from-secondary to-accent flex items-center justify-center">
-                  <div className="text-center text-secondary-foreground">
-                    <p className="text-4xl font-bold">Tload</p>
-                    <p className="text-sm">Chemistry</p>
-                  </div>
-                </div>
+              <div className="relative w-full max-w-2xl mx-auto flex items-center justify-center animate-float">
+                {/* Glow Effect */}
+                <div className="absolute inset-0 bg-secondary/30 blur-[80px] rounded-full transform scale-75 -z-10" />
 
-                {/* Connecting Lines */}
-                <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 400">
-                  <circle cx="200" cy="200" r="150" fill="none" stroke="currentColor" strokeWidth="1" className="text-border" strokeDasharray="5 5" />
-                  <circle cx="200" cy="200" r="100" fill="none" stroke="currentColor" strokeWidth="1" className="text-secondary/30" strokeDasharray="3 3" />
-                </svg>
+                <img
+                  src="/TloadTruck.png"
+                  alt="Tload Chemical Transportation Truck"
+                  width={700}
+                  height={700}
+                  className="w-full h-auto object-contain drop-shadow-2xl hover:brightness-110 transition-all duration-500"
+                />
               </div>
             </div>
           </FadeContent>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2">
-          <div className="w-1 h-2 bg-secondary rounded-full animate-pulse" />
-        </div>
-      </div>
+
     </section>
   );
 }
